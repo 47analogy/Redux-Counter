@@ -19,17 +19,13 @@ export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
       // Fill in the body of this case
-      if (action.type === 'INCREMENT') {
-        return {
-          count: count + 1
-        }
+      return {
+        count: count + 1
       }
     case DECREMENT:
       // Fill in the body of this case
-      if (action.type === 'DECREMENT') {
-        return {
-          count: count - 1
-        }
+      return {
+        count: count - 1
       }
     default:
       return count
