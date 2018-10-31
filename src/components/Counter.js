@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import { connect } from 'react-redux' // connects Redux store to component
 import { increment, decrement } from '../actions'
 
 class Counter extends Component {
@@ -23,7 +23,7 @@ class Counter extends Component {
         {' '}
         <button
           onClick={() => {
-            this.increment
+            this.props.increment()
           }}
         >
           +
@@ -31,7 +31,7 @@ class Counter extends Component {
         {' '}
         <button
           onClick={() => {
-            this.decrement
+            this.props.decrement()
           }}
         >
           -
@@ -69,5 +69,5 @@ const mapStateToProps = state => {
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
 
-// data from mapStateToProps (count) is returned as props (line 22)
+// state from mapStateToProps (count) is returned as props object (line 22)
 export default connect(mapStateToProps, { increment, decrement })(Counter)

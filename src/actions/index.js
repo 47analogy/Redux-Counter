@@ -11,14 +11,14 @@ export const DECREMENT = 'DECREMENT'
 
 // object that describes the change being made
 
-export const increment = () => {
+export const increment = count => {
   // Fill in this function
   return {
     type: INCREMENT
   }
 }
 
-export const decrement = () => {
+export const decrement = count => {
   // Fill in this function
   return {
     type: DECREMENT
